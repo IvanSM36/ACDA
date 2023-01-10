@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DAM>
+<ciclo>DAM</ciclo>
+<curso>2</curso>
+<alumnos>
+	<alumno id="1">
+		<nombre>Pedro</nombre>
+		<modulos>
+			<modulo id="1">
+				<nombre>Acceso a datos</nombre>
+				<nota>8</nota>
+			</modulo>
+			<modulo id="2">
+				<nombre>HLC</nombre>
+				<nota>9</nota>
+			</modulo>	
+		</modulos>
+	</alumno>
+	<alumno id="2">
+		<nombre>Juan</nombre>
+		<modulos>
+			<modulo id="1">
+				<nombre>Acceso a datos</nombre>
+				<nota>5</nota>
+			</modulo>
+			<modulo id="2">
+				<nombre>HLC</nombre>
+				<nota>4</nota>
+			</modulo>	
+		</modulos>
+	</alumno>
+</alumnos>
+</DAM>

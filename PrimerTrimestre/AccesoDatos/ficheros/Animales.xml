@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<selva>
+    <animal>
+        <nombre>Baloo</nombre>
+        <tipo>oso</tipo>
+        <color>gris</color>
+        <edad>8</edad>
+        </animal>
+    <animal>
+        <nombre>Simba</nombre>
+        <tipo>León</tipo>
+        <color>Marrón</color>
+        <edad>9</edad>
+    </animal>
+</selva>

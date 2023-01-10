@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<superheroes>
+	<superheroe>
+		<nombre>Hulk</nombre>
+		<arma>aplasta</arma>
+		<anyo>1962</anyo>
+	</superheroe>
+	<superheroe>
+		<nombre>Thor</nombre>
+		<arma>martillo</arma>
+		<anyo>1962</anyo>
+	</superheroe>
+	<superheroe>
+		<nombre>spiderman</nombre>
+		<arma>telaraña</arma>
+		<anyo>1962</anyo>
+	</superheroe>
+</superheroes>

@@ -1,0 +1,3 @@
+SuperHeroe [nombre=Hulk, arma=aplasta, anyo=1962]
+SuperHeroe [nombre=Thor, arma=martillo, anyo=1962]
+SuperHeroe [nombre=spiderman, arma=telaraña, anyo=1962]

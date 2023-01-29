@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<Zoo>
+	<Zona>Zona Norte</Zona>
+	<Animales>
+		<Animal>
+			<nombre>Feroz</nombre>
+			<raza>lobo</raza>
+			<color>negro</color>
+			<edad>7</edad>
+		</Animal>
+		<Animal>
+			<nombre>Simba</nombre>
+			<raza>León</raza>
+			<color>Marrón</color>
+			<edad>9</edad>
+		</Animal>
+		<Animal>
+			<nombre>Dumbo</nombre>
+			<raza>Elefante</raza>
+			<color>Gris</color>
+			<edad>>8</edad>
+		</Animal>
+		<Animal>
+			<nombre>Baloo</nombre>
+			<raza>oso</raza>
+			<color>gris</color>
+			<edad>8</edad>
+		</Animal>
+	</Animales>
+</Zoo>

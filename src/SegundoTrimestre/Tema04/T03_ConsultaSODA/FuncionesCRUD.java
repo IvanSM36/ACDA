@@ -8,7 +8,6 @@ import com.db4o.ObjectSet;
 import com.db4o.query.Constraint;
 import com.db4o.query.Query;
 
-import SegundoTrimestre.Tema04.Apuntes.ActualizarDBO.Persona;
 
 public class FuncionesCRUD {
 

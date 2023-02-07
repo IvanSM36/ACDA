@@ -16,7 +16,7 @@ public class Main {
 		config.common().objectClass(Charla.class).cascadeOnDelete(true);
 		
 		//Se abre la conexión a la base de objetos congreso.db4o
-		ObjectContainer db = Db4oEmbedded.openFile(config, "charla.db4o");
+		ObjectContainer db = Db4oEmbedded.openFile(config, "congreso.db4o");
 		
 		String titulo;
 		float duracion;

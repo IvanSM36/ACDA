@@ -84,14 +84,26 @@ public class Main {
 						System.out.println("Insertar datos en la tabla Grupo");
 						System.out.println("--------------------------------");
 						System.out.print("Introduzca cveGru: ");
-						String cveG = scan.nextLine();
+						String cveG = scan.next();
 						System.out.print("Introduzca nomG: ");
 						String nomG = scan.next();
 						Funciones.insertarDatosGrupos(cveG, nomG);
 						System.out.println();
 						break;
 					case 2:
-											
+						System.out.println();
+						System.out.println("Insertar datos en la tabla Alumno");
+						System.out.println("--------------------------------");
+						System.out.print("Introduzca cveAlu: ");
+						String cveAlu = scan.next();
+						System.out.print("Introduzca nomG: ");
+						String nomAlu = scan.next();
+						System.out.print("Introduzca edaAlu: ");
+						int edaAlu = scan.nextInt();
+						System.out.print("Introduzca cveG: ");
+						cveG = scan.next();
+						Funciones.insertarDatosAlumno(cveAlu, nomAlu, edaAlu, cveG);
+						System.out.println();				
 						break;
 					default:
 						System.out.println("Has salido del programa");

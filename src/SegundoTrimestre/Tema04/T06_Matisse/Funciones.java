@@ -158,12 +158,48 @@ public class Funciones {
 			Statement stmt = jdbcon.createStatement();
 			
 			// Define la consulta SELECT
-			String query = "INSERT INTO Grupo(cveGru, nomGru) VALUES("+ cveGru + "," + nomGru +");";
+			String query = "INSERT INTO Grupo(cveGru, nomGru) VALUES('"+ cveGru + "', '" + nomGru +"');";
 						
 			// Ejecuta la consulta y obtiene un EesulSet
 			ResultSet rset = stmt.executeQuery(query);
 					
 			
+			//Realizamos commit para realizar los cambios
+			dbcon.commit();
+			// rset y cierra la conexión a la base de objetos
+			rset.close();
+			stmt.close();
+		} catch (SQLException e) { // control de excepciones
+			System.out.println("SQLException: " + e.getMessage());
+		} finally {
+			if (dbcon.isVersionAccessInProgress()) {
+				dbcon.endVersionAccess();
+			} else if (dbcon.isTransactionInProgress()) {
+				dbcon.rollback();
+			}
+			dbcon.close(); // cierre conexión
+		}
+
+	}
+	
+	public static void insertarDatosAlumno(String cveAlu, String nomAlu, int edaAlu, String cveGru ) {
+		// Abrir una conexión a la base de objetos
+		dbcon.open();	
+		
+		// Crea la sentencia
+		try {
+			
+			Connection jdbcon = dbcon.getJDBCConnection();
+
+			// Crea la sentencia
+			Statement stmt = jdbcon.createStatement();
+			
+			// Define la consulta SELECT
+			String query = "INSERT INTO Alumno(cveAlu, nomAlu, edaAlu, cveGru) VALUES('"+ cveAlu + "', '"+ nomAlu + "'," + edaAlu + ", '" + cveGru + "');";
+						
+			// Ejecuta la consulta y obtiene un EesulSet
+			ResultSet rset = stmt.executeQuery(query);
+							
 			//Realizamos commit para realizar los cambios
 			dbcon.commit();
 			// rset y cierra la conexión a la base de objetos

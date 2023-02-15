@@ -8,5 +8,8 @@
 	</classpathentry>
 	<classpathentry kind="lib" path="lib/db4o.jar"/>
 	<classpathentry kind="lib" path="lib/matisse.jar"/>
+	<classpathentry kind="lib" path="lib/qizx.jar"/>
+	<classpathentry kind="lib" path="lib/resolver.jar"/>
+	<classpathentry kind="lib" path="lib/tagsoup-1.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

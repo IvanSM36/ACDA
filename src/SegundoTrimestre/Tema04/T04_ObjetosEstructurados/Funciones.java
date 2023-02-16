@@ -6,14 +6,21 @@ import com.db4o.query.Query;
 
 public class Funciones {
 
+	/* *
+	 * Metodo que inserta 4 charlas con ponentes
+	 * @param ObjectContainer
+	 * @return null
+	 */
 	public static void insertarCharla(ObjectContainer db) {
+		// Creo los  objetos ponentes
 		Ponente p = new Ponente("49999999-W", "Ivan", "ivan@gmail.com", 200);
 		Ponente p2 = new Ponente("48888888-P", "Miguel", "miguel@gmail,com", 200);
 		Ponente p3 = new Ponente("47777777-Q", "Dario", "dario@gmail,com", 150);
 		Ponente p4 = new Ponente("46666666-S", "Laura", "Laura@gmail,com", 100);
 
+		//Creo los objetos charlas
 		Charla c = new Charla("Flutter", 3);
-		c.setPonente(p);
+		c.setPonente(p); // Le añado los ponentes
 
 		Charla c2 = new Charla("Angular", 2);
 		c2.setPonente(p2);
@@ -30,16 +37,16 @@ public class Funciones {
 		ObjectSet<Charla> result3 = db.queryByExample(c3);
 		ObjectSet<Charla> result4 = db.queryByExample(c4);
 
-		// Si existe el objeto
+		// Si existe los objeto
 		if (result.hasNext() & result2.hasNext() & result2.hasNext() & result3.hasNext() & result4.hasNext()) {
 
-			// Obtengo el objeto persona
+			// Los obtengo.
 			Charla cBD = result.next();
 			Charla cBD2 = result2.next();
 			Charla cBD3 = result3.next();
 			Charla cBD4 = result4.next();
 
-			// Actualizo el objeto
+			// Actualizo 
 			result.add(cBD);
 			result2.add(cBD2);
 			result3.add(cBD3);
@@ -62,6 +69,11 @@ public class Funciones {
 		db.commit();
 	}
 
+	/* *
+	 *  Funcion que mopdifica la hora de un objeto charla
+	 * @param ObjectContainer, String, float
+	 * @return null
+	 */
 	public static void modificarHorasCharlas(ObjectContainer db, String titulo, float duracion) {
 		// Creo el objeto con el dni a buscar
 		Charla c = new Charla(titulo, 0);
@@ -89,6 +101,11 @@ public class Funciones {
 		db.commit();
 	}
 
+	/* *
+	 * Funcion que muestra todas las charlas
+	 * @param ObjectContainer
+	 * @return null
+	 */
 	public static void visualizarQBE(ObjectContainer db) {
 
 		// Obtenemos y mostramos todos los objetos
@@ -99,7 +116,12 @@ public class Funciones {
 			System.out.println(result.next());
 		}
 	}
-
+	
+	/* *
+	 * Funcion que muestra todas las charlas
+	 * @param ObjectContainer
+	 * @return null
+	 */
 	public static void visualizarSODA(ObjectContainer db) {
 
 		Query query = db.query();
@@ -116,6 +138,12 @@ public class Funciones {
 
 	}
 
+	/* *
+	 * Funcion que borra una charla introduciendo el titulo
+	 * @param ObjectContainer, String
+	 * @return null
+	 */
+	
 	public static void borrarCharlaporTitulo(ObjectContainer db, String titulo) {
 		
 		Query query = db.query(); // declaración de un objeto query().
@@ -130,5 +158,22 @@ public class Funciones {
 			db.delete(c);
 		}
 	}
+	
+	/* *
+	 * Funcion que muestra los Ponentes
+	 * @param ObjectContainer
+	 * @return null 
+	 */
+	public static void mostrarPonentes(ObjectContainer db) {
+		//se crea objeto p con patrón de búsqueda (el ejemplo)
+			Ponente p = new Ponente(null, null, null, 0);
+		//consulta los ponentes de patrón ponente(null, null, null, 0). Consulta QBE
+		ObjectSet result = db.queryByExample(p);
+		
+		// Mostramos los resultados
+		while (result.hasNext()) {
+			System.out.println(result.next());
+		}
+		}
 
 }

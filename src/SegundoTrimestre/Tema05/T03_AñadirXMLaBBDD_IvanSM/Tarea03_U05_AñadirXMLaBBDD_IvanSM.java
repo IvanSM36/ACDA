@@ -11,7 +11,7 @@ import com.qizx.api.LibraryManager;
 import com.qizx.api.QizxException;
 import com.qizx.api.LibraryMember;
 
-public class Main {
+public class Tarea03_U05_AñadirXMLaBBDD_IvanSM {
 
 	// Metodos
 

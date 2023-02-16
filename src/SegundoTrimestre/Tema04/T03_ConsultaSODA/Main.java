@@ -22,25 +22,25 @@ public class Main {
 		System.out.println();
 		System.out.println("Metodo consultar Ponentes SODA");
 		System.out.println("------------------------------");
-		FuncionesCRUD.consultasSODAponentes(db);
+		Funciones.consultasSODAponentes(db);
 
 		// Hacemos consulta ponentes con cache 200 con SODA
 		System.out.println();
 		System.out.println("Metodo consultar Ponentes cache 200 SODA");
 		System.out.println("----------------------------------------");
-		FuncionesCRUD.consultarPonentes200(db);
+		Funciones.consultarPonentes200(db);
 
 		// Hacemos consulta ponentes con cache entre 50 y 200 con SODA
 		System.out.println();
 		System.out.println("Metodo consultar Ponentes entre 50 y 200 SODA");
 		System.out.println("----------------------------------------");
-		FuncionesCRUD.consultaSODAcacheEntre50_200(db);
+		Funciones.consultaSODAcacheEntre50_200(db);
 
 		// Hacemos consulta ponentes con cache entre 50 y 200 con SODA
 		System.out.println();
 		System.out.println("Metodo consultar Ponentes de mayor a menor");
 		System.out.println("----------------------------------------");
-		FuncionesCRUD.consultaSODAponentesOrdenadosCache(db);
+		Funciones.consultaSODAponentesOrdenadosCache(db);
 
 		// Cerramos las conexiones
 		db.close();

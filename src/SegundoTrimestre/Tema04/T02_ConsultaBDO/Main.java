@@ -19,7 +19,7 @@ public class Main {
 		 * * Llamamos al almacenarPonentes
 		 * 
 		 */
-		FuncionesCRUD.almacenarPonentes(db);
+		Funciones.almacenarPonentes(db);
 
 		/*
 		 * * Llamamos al metodo consultarPonentes
@@ -29,7 +29,7 @@ public class Main {
 		System.out.println("Metodo consultar Ponentes");
 		System.out.println("-------------------------");
 
-		FuncionesCRUD.consultarPonentes(db);
+		Funciones.consultarPonentes(db);
 
 		/*
 		 * * Llamamos al metodo consultarPonentes200
@@ -38,7 +38,7 @@ public class Main {
 		System.out.println();
 		System.out.println("Metodo consultar Ponentes 200");
 		System.out.println("-----------------------------");
-		FuncionesCRUD.consultarPonentes200(db);
+		Funciones.consultarPonentes200(db);
 
 		/*
 		 * * LLamamos al metodo actualizarEmailPonente
@@ -52,7 +52,7 @@ public class Main {
 		System.out.print("Introduzca el nuevo email del ponente:");
 		email = sc.nextLine();
 
-		FuncionesCRUD.actualizarEmailPonente(db, dni, email);
+		Funciones.actualizarEmailPonente(db, dni, email);
 
 		/*
 		 * * Llamamos al metodo borrarPonente
@@ -63,7 +63,7 @@ public class Main {
 		System.out.println("-------------------------");
 		System.out.print("Introduzca el DNI del ponente a buscar:");
 		dni = sc.nextLine();
-		FuncionesCRUD.borrarPonentePorNif(db, dni);
+		Funciones.borrarPonentePorNif(db, dni);
 
 		/*
 		 * * Llamamos al metodo consultarPonentes
@@ -73,7 +73,7 @@ public class Main {
 		System.out.println("Metodo consultar Ponentes");
 		System.out.println("-------------------------");
 
-		FuncionesCRUD.consultarPonentes(db);
+		Funciones.consultarPonentes(db);
 		
 		//Cerramos las conexiones
 		db.close();

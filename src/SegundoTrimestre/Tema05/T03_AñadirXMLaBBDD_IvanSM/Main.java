@@ -95,6 +95,23 @@ public class Main {
 			}
 	}
 
+	/* *
+	 * Metodo que borra un documento
+	 */
+	private static void borrarDocumento(Library bd, String borrarDocu) {
+		try {
+			bd.deleteMember(borrarDocu);
+			
+			System.out.println("Documento eliminado correctamente.");
+			
+			bd.commit();
+		} catch (DataModelException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}		
+		
+	}
+	
 	/*
 	 * * Método que cierra la conexión a la base de datos
 	 * 
@@ -143,26 +160,33 @@ public class Main {
 			crearColeccion(bd, rutaProfesores);
 			crearColeccion(bd, rutaAulas);
 			
-			
 			// Rutas de documentos
+			String rutaDocuInstituto = "Instituto_datos\\Instituto_d.xml";
 			String rutaDocuClases = "Instituto_datos\\Clases\\Clases.xml";
 			String rutaDocuAlumnos = "Instituto_datos\\Alumnos\\Alumnos.xml";
 			String rutaDocuProfesores = "Instituto_datos\\Profesores\\AntonioBernal.xml";
 			String rutaDocuAulas = "Instituto_datos\\Aulas\\aula1.xml";
 			
 			//Rutas de ficheros
+			File rutaFicheroInstituto = new File("C:\\Ivan\\2ºDAM\\ACDA\\Practica03T05\\Instituto_d.xml");
 			File rutaFicheroClases = new File("C:\\Ivan\\2ºDAM\\ACDA\\Practica03T05\\Clases.xml");
 			File rutaFicheroAlumnos = new File("C:\\Ivan\\2ºDAM\\ACDA\\Practica03T05\\Alumnos.xml");
 			File rutaFicheroProfesores = new File("C:\\Ivan\\2ºDAM\\ACDA\\Practica03T05\\AntonioBernal.xml");
 			File rutaFicheroAulas = new File("C:\\Ivan\\2ºDAM\\ACDA\\Practica03T05\\aula1.xml");
 			
-			// Llamamos al metodo aniadirDocumentos para añadirlos
-			
+			// Llamamos al metodo aniadirDocumentos para añadirlos		
+			aniadirDocumento(bd, rutaDocuInstituto, rutaFicheroInstituto);
 			aniadirDocumento(bd, rutaDocuClases, rutaFicheroClases);
 			aniadirDocumento(bd, rutaDocuAlumnos, rutaFicheroAlumnos);
 			aniadirDocumento(bd, rutaDocuProfesores, rutaFicheroProfesores);
 			aniadirDocumento(bd, rutaDocuAulas, rutaFicheroAulas);
-
+			
+			String borrarDocu = "/Instituto_datos/Aulas/aula1.xml";
+			
+			// Llamamos al metodo para borrar un documento Descomentar para que funcione
+			// borrarDocumento(bd, borrarDocu); 
+			
+			
 			// cierra o realiza la desconexión de la BD bd
 			cerrar(bd, bdManager);
 		} catch (IOException e) {

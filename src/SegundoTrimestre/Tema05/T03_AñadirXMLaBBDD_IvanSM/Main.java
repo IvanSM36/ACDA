@@ -1,4 +1,4 @@
-package SegundoTrimestre.Tema05.T03_AÃ±adirXMLaBBDD_IvanSM;
+package SegundoTrimestre.Tema05.T03_AñadirXMLaBBDD_IvanSM;
 
 import java.io.File;
 import java.io.IOException;

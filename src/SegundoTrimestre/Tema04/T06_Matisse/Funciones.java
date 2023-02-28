@@ -10,13 +10,13 @@ import com.matisse.MtDatabase;
 
 public class Funciones {
 
-	// Crea un objeto MtDatabase asociando la cadena de conexión (Host,BD)
+	// Crea un objeto MtDatabase asociando la cadena de conexion (Host,BD)
 	static MtDatabase dbcon = new MtDatabase("localhost", "Escuela");
 
 	
 
 	public static void mostrarGrupos() {
-		// Abrir una conexión a la base de objetos
+		// Abrir una conexion a la base de objetos
 		dbcon.open();	
 		
 		// Crea la sentencia
@@ -30,7 +30,7 @@ public class Funciones {
 			// Define la consulta SELECT
 			String query = "SELECT * FROM Grupo;";
 
-			// Ejecuta la consulta y obtiene un EesulSet
+			//Ejecuta la consulta y obtiene un ResulSet
 			ResultSet rset = stmt.executeQuery(query);
 			
 			// No funciona
@@ -62,7 +62,7 @@ public class Funciones {
 				// Imprime la fila en curso
 				System.out.println(String.format("%10s", oID) + " " + String.format("%10s", cveG) + " " + String.format("%10s", nomG));
 			}
-			// rset y cierra la conexión a la base de objetos
+			// rset y cierra la conexion a la base de objetos
 			rset.close();
 			stmt.close();
 		} catch (SQLException e) { // control de excepciones

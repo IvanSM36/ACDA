@@ -1,4 +1,4 @@
-package SegundoTrimestre.Tema05.T03_AÃ±adirXMLaBBDD_IvanSM;
+package SegundoTrimestre.Tema05.T03_AñadirXMLaBBDD_IvanSM;
 
 import java.io.File;
 import java.io.IOException;
@@ -11,7 +11,7 @@ import com.qizx.api.LibraryManager;
 import com.qizx.api.QizxException;
 import com.qizx.api.LibraryMember;
 
-public class Tarea03_U05_AÃ±adirXMLaBBDD_IvanSM {
+public class Tarea03_U05_AñadirXMLaBBDD_IvanSM {
 
 	// Metodos
 
